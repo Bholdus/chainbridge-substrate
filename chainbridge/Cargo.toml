@@ -1,5 +1,5 @@
 [package]
-name = 'chainbridge'
+name = 'bholdus-chainbridge'
 version = '0.1.0'
 authors = ['dung.lam@bholdus.com']
 edition = '2018'
