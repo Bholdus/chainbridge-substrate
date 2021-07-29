@@ -2,13 +2,12 @@
 
 use super::*;
 
-use frame_support::{assert_ok, ord_parameter_types, parameter_types, weights::Weight};
+use frame_support::{assert_ok, ord_parameter_types, parameter_types, weights::Weight, PalletId};
 use frame_system::{self as system};
 use sp_core::H256;
 use sp_runtime::{
     testing::Header,
     traits::{AccountIdConversion, BlakeTwo256, IdentityLookup},
-    Perbill,
 };
 
 use crate::{self as bridge, Config};
@@ -16,14 +15,15 @@ pub use pallet_balances as balances;
 
 parameter_types! {
     pub const BlockHashCount: u64 = 250;
-    pub const MaximumBlockWeight: Weight = 1024;
-    pub const MaximumBlockLength: u32 = 2 * 1024;
-    pub const AvailableBlockRatio: Perbill = Perbill::one();
     pub const MaxLocks: u32 = 100;
+    pub const SS58Prefix: u16 = 2207;
 }
 
-impl frame_system::Config for Test {
+impl system::Config for Test {
     type BaseCallFilter = ();
+    type BlockWeights = ();
+    type BlockLength = ();
+    type DbWeight = ();
     type Origin = Origin;
     type Call = Call;
     type Index = u64;
@@ -35,16 +35,14 @@ impl frame_system::Config for Test {
     type Header = Header;
     type Event = Event;
     type BlockHashCount = BlockHashCount;
-    type DbWeight = ();
     type Version = ();
+    type PalletInfo = PalletInfo;
     type AccountData = pallet_balances::AccountData<u64>;
     type OnNewAccount = ();
     type OnKilledAccount = ();
     type SystemWeightInfo = ();
-    type PalletInfo = PalletInfo;
-    type BlockWeights = ();
-    type BlockLength = ();
-    type SS58Prefix = ();
+    type SS58Prefix = SS58Prefix;
+    type OnSetCode = ();
 }
 
 parameter_types! {
@@ -78,8 +76,8 @@ impl Config for Test {
     type ProposalLifetime = ProposalLifetime;
 }
 
-pub type Block = sp_runtime::generic::Block<Header, UncheckedExtrinsic>;
-pub type UncheckedExtrinsic = sp_runtime::generic::UncheckedExtrinsic<u32, u64, Call, ()>;
+pub type Block = frame_system::mocking::MockBlock<Test>;
+pub type UncheckedExtrinsic = frame_system::mocking::MockUncheckedExtrinsic<Test>;
 
 frame_support::construct_runtime!(
     pub enum Test where
@@ -87,9 +85,9 @@ frame_support::construct_runtime!(
         NodeBlock = Block,
         UncheckedExtrinsic = UncheckedExtrinsic
     {
-        System: system::{Module, Call, Event<T>},
-        Balances: balances::{Module, Call, Storage, Config<T>, Event<T>},
-        Bridge: bridge::{Module, Call, Storage, Event<T>},
+        System: system::{Pallet, Call, Event<T>},
+        Balances: balances::{Pallet, Call, Storage, Config<T>, Event<T>},
+        Bridge: bridge::{Pallet, Call, Storage, Event<T>},
     }
 );
 
@@ -101,7 +99,7 @@ pub const ENDOWED_BALANCE: u64 = 100_000_000;
 pub const TEST_THRESHOLD: u32 = 2;
 
 pub fn new_test_ext() -> sp_io::TestExternalities {
-    let bridge_id = ModuleId(*b"cb/bridg").into_account();
+    let bridge_id = PalletId(*b"cb/bridg").into_account();
     let mut t = frame_system::GenesisConfig::default()
         .build_storage::<Test>()
         .unwrap();
@@ -141,7 +139,7 @@ pub fn new_test_ext_initialized(
 // Checks events against the latest. A contiguous set of events must be provided. They must
 // include the most recent event, but do not have to include every past event.
 pub fn assert_events(mut expected: Vec<Event>) {
-    let mut actual: Vec<Event> = system::Module::<Test>::events()
+    let mut actual: Vec<Event> = system::Pallet::<Test>::events()
         .iter()
         .map(|e| e.event.clone())
         .collect();
