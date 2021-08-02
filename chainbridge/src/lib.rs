@@ -122,6 +122,14 @@ pub mod pallet {
     #[pallet::generate_store(pub(super) trait Store)]
     pub struct Pallet<T>(_);
 
+    #[pallet::extra_constants]
+    impl<T: Config> Pallet<T> {
+        /// Some description
+        fn ChainIdentity() -> ChainId {
+            T::ChainId::get()
+        }
+    }
+
     #[pallet::hooks]
     impl<T: Config> Hooks<BlockNumberFor<T>> for Pallet<T> {}
 
