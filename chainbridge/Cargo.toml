@@ -3,7 +3,7 @@ name = 'bholdus-chainbridge'
 # Since a pallet always depends on frame-system, frame-support,
 # we want to make keep our package versioning close to these frame dependencies.
 # As this will help us to resolve conflicts easier if happened
-version = '3.0.0'
+version = '3.0.1'
 authors = ['dung.lam@bholdus.com']
 edition = '2018'
 
