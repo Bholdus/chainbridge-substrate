@@ -124,9 +124,14 @@ pub mod pallet {
 
     #[pallet::extra_constants]
     impl<T: Config> Pallet<T> {
-        /// Some description
+        /// Chain Identity
         fn ChainIdentity() -> ChainId {
             T::ChainId::get()
+        }
+
+        /// ChainBridge Pallet Account Id
+        fn PalletAccountId() -> T::AccountId {
+            Self::account_id()
         }
     }
 
