@@ -47,6 +47,8 @@ impl system::Config for Test {
 
 parameter_types! {
     pub const ExistentialDeposit: u64 = 1;
+    pub const MaxReserves: u32 = 1;
+    pub const ReserveIdentifier: u32 = 1;
 }
 
 ord_parameter_types! {
@@ -60,6 +62,8 @@ impl pallet_balances::Config for Test {
     type ExistentialDeposit = ExistentialDeposit;
     type AccountStore = System;
     type MaxLocks = MaxLocks;
+    type MaxReserves = MaxReserves;
+    type ReserveIdentifier = [u8; 8];
     type WeightInfo = ();
 }
 

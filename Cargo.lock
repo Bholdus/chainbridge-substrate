@@ -144,18 +144,18 @@ checksum = "5024ee8015f02155eee35c711107ddd9a9bf3cb689cf2a9089c97e79b6e1ae83"
 
 [[package]]
 name = "bholdus-chainbridge"
-version = "3.0.2"
+version = "3.0.0"
 dependencies = [
  "frame-benchmarking",
- "frame-support",
- "frame-system",
- "pallet-balances",
+ "frame-support 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "frame-system 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "pallet-balances 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
  "parity-scale-codec",
  "serde",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-io 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-runtime 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
 ]
 
 [[package]]
@@ -239,6 +239,9 @@ name = "cc"
 version = "1.0.69"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e70cc2f62c6ce1868963827bd677764c62d07c3d9a3e1fb1177ee1a9ab199eb2"
+dependencies = [
+ "jobserver",
+]
 
 [[package]]
 name = "cfg-if"
@@ -262,6 +265,15 @@ dependencies = [
  "num-integer",
  "num-traits",
  "winapi",
+]
+
+[[package]]
+name = "cloudabi"
+version = "0.0.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ddfc5b9aa5d4507acaf872de71051dfd0e309860e88966e1051e462a077aac4f"
+dependencies = [
+ "bitflags",
 ]
 
 [[package]]
@@ -369,6 +381,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "downcast-rs"
+version = "1.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9ea835d29036a4087793836fa931b08837ad5e957da9e23886b29586fb9b6650"
+
+[[package]]
 name = "dyn-clonable"
 version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -431,18 +449,27 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "68b91989ae21441195d7d9b9993a2f9295c7e1a8c96255d8b729accddc124797"
 
 [[package]]
+name = "erased-serde"
+version = "0.3.16"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3de9ad4541d99dc22b59134e7ff8dc3d6c988c89ecd7324bf10a8362b07a2afa"
+dependencies = [
+ "serde",
+]
+
+[[package]]
 name = "example-erc721"
 version = "0.0.1"
 dependencies = [
- "frame-support",
- "frame-system",
- "pallet-balances",
+ "frame-support 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "frame-system 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "pallet-balances 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
  "parity-scale-codec",
  "serde",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-io 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-runtime 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
  "substrate-wasm-builder-runner",
 ]
 
@@ -452,16 +479,16 @@ version = "0.0.1"
 dependencies = [
  "bholdus-chainbridge",
  "example-erc721",
- "frame-support",
- "frame-system",
- "pallet-balances",
+ "frame-support 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "frame-system 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "pallet-balances 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
  "parity-scale-codec",
  "serde",
- "sp-arithmetic",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-std",
+ "sp-arithmetic 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-io 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-runtime 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
  "substrate-wasm-builder-runner",
 ]
 
@@ -486,20 +513,31 @@ dependencies = [
 [[package]]
 name = "frame-benchmarking"
 version = "3.1.0"
-source = "git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update#534f34d9cbea4aa64043483baef83b070ca3251c"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
 dependencies = [
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "frame-system 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
  "linregress",
  "log",
  "parity-scale-codec",
  "paste",
  "sp-api",
- "sp-io",
- "sp-runtime",
- "sp-runtime-interface",
- "sp-std",
- "sp-storage",
+ "sp-io 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-runtime 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-runtime-interface 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-storage 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+]
+
+[[package]]
+name = "frame-metadata"
+version = "13.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "parity-scale-codec",
+ "serde",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
 ]
 
 [[package]]
@@ -509,8 +547,35 @@ source = "git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-up
 dependencies = [
  "parity-scale-codec",
  "serde",
- "sp-core",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+]
+
+[[package]]
+name = "frame-support"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "bitflags",
+ "frame-metadata 13.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "frame-support-procedural 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "impl-trait-for-tuples",
+ "log",
+ "max-encoded-len",
+ "once_cell",
+ "parity-scale-codec",
+ "paste",
+ "serde",
+ "smallvec",
+ "sp-arithmetic 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-inherents 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-io 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-runtime 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-staking 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-state-machine 0.9.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-tracing 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
 ]
 
 [[package]]
@@ -519,8 +584,8 @@ version = "3.0.0"
 source = "git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update#534f34d9cbea4aa64043483baef83b070ca3251c"
 dependencies = [
  "bitflags",
- "frame-metadata",
- "frame-support-procedural",
+ "frame-metadata 13.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "frame-support-procedural 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
  "impl-trait-for-tuples",
  "log",
  "once_cell",
@@ -528,15 +593,27 @@ dependencies = [
  "paste",
  "serde",
  "smallvec",
- "sp-arithmetic",
- "sp-core",
- "sp-inherents",
- "sp-io",
- "sp-runtime",
- "sp-staking",
- "sp-state-machine",
- "sp-std",
- "sp-tracing",
+ "sp-arithmetic 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-inherents 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-io 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-runtime 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-staking 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-state-machine 0.9.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-tracing 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+]
+
+[[package]]
+name = "frame-support-procedural"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "Inflector",
+ "frame-support-procedural-tools 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "proc-macro2",
+ "quote",
+ "syn",
 ]
 
 [[package]]
@@ -545,7 +622,19 @@ version = "3.0.0"
 source = "git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update#534f34d9cbea4aa64043483baef83b070ca3251c"
 dependencies = [
  "Inflector",
- "frame-support-procedural-tools",
+ "frame-support-procedural-tools 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "frame-support-procedural-tools"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "frame-support-procedural-tools-derive 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "proc-macro-crate",
  "proc-macro2",
  "quote",
  "syn",
@@ -556,8 +645,18 @@ name = "frame-support-procedural-tools"
 version = "3.0.0"
 source = "git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update#534f34d9cbea4aa64043483baef83b070ca3251c"
 dependencies = [
- "frame-support-procedural-tools-derive",
+ "frame-support-procedural-tools-derive 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
  "proc-macro-crate",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "frame-support-procedural-tools-derive"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
  "proc-macro2",
  "quote",
  "syn",
@@ -576,18 +675,35 @@ dependencies = [
 [[package]]
 name = "frame-system"
 version = "3.0.0"
-source = "git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update#534f34d9cbea4aa64043483baef83b070ca3251c"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
 dependencies = [
- "frame-support",
+ "frame-support 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
  "impl-trait-for-tuples",
  "log",
  "parity-scale-codec",
  "serde",
- "sp-core",
- "sp-io",
- "sp-runtime",
- "sp-std",
- "sp-version",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-io 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-runtime 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-version 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+]
+
+[[package]]
+name = "frame-system"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update#534f34d9cbea4aa64043483baef83b070ca3251c"
+dependencies = [
+ "frame-support 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "impl-trait-for-tuples",
+ "log",
+ "parity-scale-codec",
+ "serde",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-io 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-runtime 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-version 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
 ]
 
 [[package]]
@@ -871,6 +987,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "dd25036021b0de88a0aff6b850051563c6516d0bf53f8638938edbb9de732736"
 
 [[package]]
+name = "jobserver"
+version = "0.1.24"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "af25a77299a7f711a01975c35a6a424eb6862092cc2d6c72c4ed6cbc56dfc1fa"
+dependencies = [
+ "libc",
+]
+
+[[package]]
 name = "keccak"
 version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -922,6 +1047,15 @@ dependencies = [
 
 [[package]]
 name = "lock_api"
+version = "0.3.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c4da24a77a3d8a6d4862d95f72e6fdb9c09a643ecdb402d754004a557f2bec75"
+dependencies = [
+ "scopeguard",
+]
+
+[[package]]
+name = "lock_api"
 version = "0.4.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0382880606dff6d15c9476c416d18690b72742aa7b605bb6dd6ec9030fbf07eb"
@@ -954,6 +1088,28 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5a8a15b776d9dfaecd44b03c5828c2199cddff5247215858aac14624f8d6b741"
 dependencies = [
  "rawpointer",
+]
+
+[[package]]
+name = "max-encoded-len"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "impl-trait-for-tuples",
+ "max-encoded-len-derive",
+ "parity-scale-codec",
+ "primitive-types",
+]
+
+[[package]]
+name = "max-encoded-len-derive"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "proc-macro-crate",
+ "proc-macro2",
+ "quote",
+ "syn",
 ]
 
 [[package]]
@@ -1124,7 +1280,7 @@ version = "1.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "692fcb63b64b1758029e0a96ee63e049ce8c5948587f2f7208df04625e5f6b56"
 dependencies = [
- "parking_lot",
+ "parking_lot 0.11.1",
 ]
 
 [[package]]
@@ -1142,15 +1298,29 @@ checksum = "624a8340c38c1b80fd549087862da4ba43e08858af025b236e509b6649fc13d5"
 [[package]]
 name = "pallet-balances"
 version = "3.0.0"
-source = "git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update#534f34d9cbea4aa64043483baef83b070ca3251c"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
 dependencies = [
  "frame-benchmarking",
- "frame-support",
- "frame-system",
+ "frame-support 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "frame-system 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "log",
+ "max-encoded-len",
+ "parity-scale-codec",
+ "sp-runtime 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+]
+
+[[package]]
+name = "pallet-balances"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update#534f34d9cbea4aa64043483baef83b070ca3251c"
+dependencies = [
+ "frame-support 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "frame-system 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
  "log",
  "parity-scale-codec",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
 ]
 
 [[package]]
@@ -1189,7 +1359,7 @@ dependencies = [
  "hashbrown 0.9.1",
  "impl-trait-for-tuples",
  "parity-util-mem-derive",
- "parking_lot",
+ "parking_lot 0.11.1",
  "primitive-types",
  "winapi",
 ]
@@ -1212,14 +1382,44 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ddfc878dac00da22f8f61e7af3157988424567ab01d9920b962ef7dcbd7cd865"
 
 [[package]]
+name = "parity-wasm"
+version = "0.42.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "be5e13c266502aadf83426d87d81a0f5d1ef45b8027f5a471c360abfe4bfae92"
+
+[[package]]
+name = "parking_lot"
+version = "0.10.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d3a704eb390aafdc107b0e392f56a82b668e3a71366993b5340f5833fd62505e"
+dependencies = [
+ "lock_api 0.3.4",
+ "parking_lot_core 0.7.2",
+]
+
+[[package]]
 name = "parking_lot"
 version = "0.11.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6d7744ac029df22dca6284efe4e898991d28e3085c706c972bcd7da4a27a15eb"
 dependencies = [
  "instant",
- "lock_api",
- "parking_lot_core",
+ "lock_api 0.4.4",
+ "parking_lot_core 0.8.3",
+]
+
+[[package]]
+name = "parking_lot_core"
+version = "0.7.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d58c7c768d4ba344e3e8d72518ac13e259d7c7ade24167003b8488e10b6740a3"
+dependencies = [
+ "cfg-if 0.1.10",
+ "cloudabi",
+ "libc",
+ "redox_syscall 0.1.57",
+ "smallvec",
+ "winapi",
 ]
 
 [[package]]
@@ -1231,7 +1431,7 @@ dependencies = [
  "cfg-if 1.0.0",
  "instant",
  "libc",
- "redox_syscall",
+ "redox_syscall 0.2.9",
  "smallvec",
  "winapi",
 ]
@@ -1455,6 +1655,12 @@ checksum = "60a357793950651c4ed0f3f52338f53b2f809f32d83a07f72909fa13e4c6c1e3"
 
 [[package]]
 name = "redox_syscall"
+version = "0.1.57"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "41cc0f7e4d5d4544e8861606a285bb08d3e70712ccc7d2b84d7c0ccfaf4b05ce"
+
+[[package]]
+name = "redox_syscall"
 version = "0.2.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5ab49abadf3f9e1c4bc499e8845e152ad87d2ad2d30371841171169e9d75feee"
@@ -1533,6 +1739,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f0dfe2087c51c460008730de8b57e6a320782fbfb312e1f4d520e6c6fae155ee"
 dependencies = [
  "semver",
+]
+
+[[package]]
+name = "ruzstd"
+version = "0.2.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8cada0ef59efa6a5f4dc5e491f93d9f31e3fc7758df421ff1de8a706338e1100"
+dependencies = [
+ "byteorder",
+ "twox-hash",
 ]
 
 [[package]]
@@ -1683,6 +1899,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f173ac3d1a7e3b28003f40de0b5ce7fe2710f9b9dc3fc38664cebee46b3b6527"
 
 [[package]]
+name = "slog"
+version = "2.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8347046d4ebd943127157b94d63abb990fcf729dc4e9978927fdf4ac3c998d06"
+dependencies = [
+ "erased-serde",
+]
+
+[[package]]
 name = "smallvec"
 version = "1.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1691,24 +1916,24 @@ checksum = "fe0f37c9e8f3c5a4a66ad655a93c74daac4ad00c441533bf5c6e7990bb42604e"
 [[package]]
 name = "sp-api"
 version = "3.0.0"
-source = "git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update#534f34d9cbea4aa64043483baef83b070ca3251c"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
 dependencies = [
  "hash-db",
  "log",
  "parity-scale-codec",
  "sp-api-proc-macro",
- "sp-core",
- "sp-runtime",
- "sp-state-machine",
- "sp-std",
- "sp-version",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-runtime 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-state-machine 0.9.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-version 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
  "thiserror",
 ]
 
 [[package]]
 name = "sp-api-proc-macro"
 version = "3.0.0"
-source = "git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update#534f34d9cbea4aa64043483baef83b070ca3251c"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
 dependencies = [
  "blake2-rfc",
  "proc-macro-crate",
@@ -1720,13 +1945,40 @@ dependencies = [
 [[package]]
 name = "sp-application-crypto"
 version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "max-encoded-len",
+ "parity-scale-codec",
+ "serde",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-io 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+]
+
+[[package]]
+name = "sp-application-crypto"
+version = "3.0.0"
 source = "git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update#534f34d9cbea4aa64043483baef83b070ca3251c"
 dependencies = [
  "parity-scale-codec",
  "serde",
- "sp-core",
- "sp-io",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-io 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+]
+
+[[package]]
+name = "sp-arithmetic"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "integer-sqrt",
+ "num-traits",
+ "parity-scale-codec",
+ "serde",
+ "sp-debug-derive 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "static_assertions",
 ]
 
 [[package]]
@@ -1738,9 +1990,54 @@ dependencies = [
  "num-traits",
  "parity-scale-codec",
  "serde",
- "sp-debug-derive",
- "sp-std",
+ "sp-debug-derive 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
  "static_assertions",
+]
+
+[[package]]
+name = "sp-core"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "base58",
+ "blake2-rfc",
+ "byteorder",
+ "dyn-clonable",
+ "ed25519-dalek",
+ "futures",
+ "hash-db",
+ "hash256-std-hasher",
+ "hex",
+ "impl-serde",
+ "lazy_static",
+ "libsecp256k1",
+ "log",
+ "max-encoded-len",
+ "merlin",
+ "num-traits",
+ "parity-scale-codec",
+ "parity-util-mem",
+ "parking_lot 0.11.1",
+ "primitive-types",
+ "rand 0.7.3",
+ "regex",
+ "schnorrkel",
+ "secrecy",
+ "serde",
+ "sha2 0.9.5",
+ "sp-debug-derive 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-externalities 0.9.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-runtime-interface 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-storage 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "substrate-bip39",
+ "thiserror",
+ "tiny-bip39",
+ "tiny-keccak",
+ "twox-hash",
+ "wasmi 0.9.0",
+ "zeroize",
 ]
 
 [[package]]
@@ -1765,7 +2062,7 @@ dependencies = [
  "num-traits",
  "parity-scale-codec",
  "parity-util-mem",
- "parking_lot",
+ "parking_lot 0.11.1",
  "primitive-types",
  "rand 0.7.3",
  "regex",
@@ -1773,18 +2070,28 @@ dependencies = [
  "secrecy",
  "serde",
  "sha2 0.9.5",
- "sp-debug-derive",
- "sp-externalities",
- "sp-runtime-interface",
- "sp-std",
- "sp-storage",
+ "sp-debug-derive 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-externalities 0.9.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-runtime-interface 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-storage 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
  "substrate-bip39",
  "thiserror",
  "tiny-bip39",
  "tiny-keccak",
  "twox-hash",
- "wasmi",
+ "wasmi 0.6.2",
  "zeroize",
+]
+
+[[package]]
+name = "sp-debug-derive"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
 ]
 
 [[package]]
@@ -1800,12 +2107,37 @@ dependencies = [
 [[package]]
 name = "sp-externalities"
 version = "0.9.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "environmental",
+ "parity-scale-codec",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-storage 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+]
+
+[[package]]
+name = "sp-externalities"
+version = "0.9.0"
 source = "git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update#534f34d9cbea4aa64043483baef83b070ca3251c"
 dependencies = [
  "environmental",
  "parity-scale-codec",
- "sp-std",
- "sp-storage",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-storage 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+]
+
+[[package]]
+name = "sp-inherents"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "async-trait",
+ "impl-trait-for-tuples",
+ "parity-scale-codec",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-runtime 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "thiserror",
 ]
 
 [[package]]
@@ -1814,10 +2146,35 @@ version = "3.0.0"
 source = "git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update#534f34d9cbea4aa64043483baef83b070ca3251c"
 dependencies = [
  "parity-scale-codec",
- "parking_lot",
- "sp-core",
- "sp-std",
+ "parking_lot 0.11.1",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
  "thiserror",
+]
+
+[[package]]
+name = "sp-io"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "futures",
+ "hash-db",
+ "libsecp256k1",
+ "log",
+ "parity-scale-codec",
+ "parking_lot 0.11.1",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-externalities 0.9.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-keystore 0.9.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-maybe-compressed-blob",
+ "sp-runtime-interface 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-state-machine 0.9.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-tracing 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-trie 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-wasm-interface 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "tracing",
+ "tracing-core",
 ]
 
 [[package]]
@@ -1830,18 +2187,34 @@ dependencies = [
  "libsecp256k1",
  "log",
  "parity-scale-codec",
- "parking_lot",
- "sp-core",
- "sp-externalities",
- "sp-keystore",
- "sp-runtime-interface",
- "sp-state-machine",
- "sp-std",
- "sp-tracing",
- "sp-trie",
- "sp-wasm-interface",
+ "parking_lot 0.11.1",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-externalities 0.9.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-keystore 0.9.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-runtime-interface 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-state-machine 0.9.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-tracing 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-trie 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-wasm-interface 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
  "tracing",
  "tracing-core",
+]
+
+[[package]]
+name = "sp-keystore"
+version = "0.9.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "async-trait",
+ "derive_more",
+ "futures",
+ "merlin",
+ "parity-scale-codec",
+ "parking_lot 0.11.1",
+ "schnorrkel",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-externalities 0.9.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
 ]
 
 [[package]]
@@ -1854,10 +2227,27 @@ dependencies = [
  "futures",
  "merlin",
  "parity-scale-codec",
- "parking_lot",
+ "parking_lot 0.11.1",
  "schnorrkel",
- "sp-core",
- "sp-externalities",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-externalities 0.9.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+]
+
+[[package]]
+name = "sp-maybe-compressed-blob"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "ruzstd",
+ "zstd",
+]
+
+[[package]]
+name = "sp-panic-handler"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "backtrace",
 ]
 
 [[package]]
@@ -1866,6 +2256,28 @@ version = "3.0.0"
 source = "git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update#534f34d9cbea4aa64043483baef83b070ca3251c"
 dependencies = [
  "backtrace",
+]
+
+[[package]]
+name = "sp-runtime"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "either",
+ "hash256-std-hasher",
+ "impl-trait-for-tuples",
+ "log",
+ "max-encoded-len",
+ "parity-scale-codec",
+ "parity-util-mem",
+ "paste",
+ "rand 0.7.3",
+ "serde",
+ "sp-application-crypto 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-arithmetic 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-io 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
 ]
 
 [[package]]
@@ -1882,11 +2294,28 @@ dependencies = [
  "paste",
  "rand 0.7.3",
  "serde",
- "sp-application-crypto",
- "sp-arithmetic",
- "sp-core",
- "sp-io",
- "sp-std",
+ "sp-application-crypto 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-arithmetic 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-io 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+]
+
+[[package]]
+name = "sp-runtime-interface"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "impl-trait-for-tuples",
+ "parity-scale-codec",
+ "primitive-types",
+ "sp-externalities 0.9.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-runtime-interface-proc-macro 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-storage 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-tracing 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-wasm-interface 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "static_assertions",
 ]
 
 [[package]]
@@ -1897,13 +2326,25 @@ dependencies = [
  "impl-trait-for-tuples",
  "parity-scale-codec",
  "primitive-types",
- "sp-externalities",
- "sp-runtime-interface-proc-macro",
- "sp-std",
- "sp-storage",
- "sp-tracing",
- "sp-wasm-interface",
+ "sp-externalities 0.9.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-runtime-interface-proc-macro 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-storage 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-tracing 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-wasm-interface 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
  "static_assertions",
+]
+
+[[package]]
+name = "sp-runtime-interface-proc-macro"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "Inflector",
+ "proc-macro-crate",
+ "proc-macro2",
+ "quote",
+ "syn",
 ]
 
 [[package]]
@@ -1921,11 +2362,44 @@ dependencies = [
 [[package]]
 name = "sp-staking"
 version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "parity-scale-codec",
+ "sp-runtime 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+]
+
+[[package]]
+name = "sp-staking"
+version = "3.0.0"
 source = "git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update#534f34d9cbea4aa64043483baef83b070ca3251c"
 dependencies = [
  "parity-scale-codec",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+]
+
+[[package]]
+name = "sp-state-machine"
+version = "0.9.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "hash-db",
+ "log",
+ "num-traits",
+ "parity-scale-codec",
+ "parking_lot 0.11.1",
+ "rand 0.7.3",
+ "smallvec",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-externalities 0.9.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-panic-handler 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-trie 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "thiserror",
+ "tracing",
+ "trie-db",
+ "trie-root",
 ]
 
 [[package]]
@@ -1937,14 +2411,14 @@ dependencies = [
  "log",
  "num-traits",
  "parity-scale-codec",
- "parking_lot",
+ "parking_lot 0.11.1",
  "rand 0.7.3",
  "smallvec",
- "sp-core",
- "sp-externalities",
- "sp-panic-handler",
- "sp-std",
- "sp-trie",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-externalities 0.9.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-panic-handler 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-trie 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
  "thiserror",
  "trie-db",
  "trie-root",
@@ -1953,7 +2427,25 @@ dependencies = [
 [[package]]
 name = "sp-std"
 version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+
+[[package]]
+name = "sp-std"
+version = "3.0.0"
 source = "git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update#534f34d9cbea4aa64043483baef83b070ca3251c"
+
+[[package]]
+name = "sp-storage"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "impl-serde",
+ "parity-scale-codec",
+ "ref-cast",
+ "serde",
+ "sp-debug-derive 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+]
 
 [[package]]
 name = "sp-storage"
@@ -1964,8 +2456,26 @@ dependencies = [
  "parity-scale-codec",
  "ref-cast",
  "serde",
- "sp-debug-derive",
- "sp-std",
+ "sp-debug-derive 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+]
+
+[[package]]
+name = "sp-tracing"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "erased-serde",
+ "log",
+ "parity-scale-codec",
+ "parking_lot 0.10.2",
+ "serde",
+ "serde_json",
+ "slog",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "tracing",
+ "tracing-core",
+ "tracing-subscriber",
 ]
 
 [[package]]
@@ -1975,10 +2485,24 @@ source = "git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-up
 dependencies = [
  "log",
  "parity-scale-codec",
- "sp-std",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
  "tracing",
  "tracing-core",
  "tracing-subscriber",
+]
+
+[[package]]
+name = "sp-trie"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "hash-db",
+ "memory-db",
+ "parity-scale-codec",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "trie-db",
+ "trie-root",
 ]
 
 [[package]]
@@ -1989,10 +2513,23 @@ dependencies = [
  "hash-db",
  "memory-db",
  "parity-scale-codec",
- "sp-core",
- "sp-std",
+ "sp-core 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
  "trie-db",
  "trie-root",
+]
+
+[[package]]
+name = "sp-version"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "impl-serde",
+ "parity-scale-codec",
+ "serde",
+ "sp-runtime 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "sp-version-proc-macro",
 ]
 
 [[package]]
@@ -2003,8 +2540,31 @@ dependencies = [
  "impl-serde",
  "parity-scale-codec",
  "serde",
- "sp-runtime",
- "sp-std",
+ "sp-runtime 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+]
+
+[[package]]
+name = "sp-version-proc-macro"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "parity-scale-codec",
+ "proc-macro-crate",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "sp-wasm-interface"
+version = "3.0.0"
+source = "git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07#2db5fdfc1cbc0b74512c072ae1dc5780bbbb10ca"
+dependencies = [
+ "impl-trait-for-tuples",
+ "parity-scale-codec",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=bholdus-monthly-2021-07)",
+ "wasmi 0.9.0",
 ]
 
 [[package]]
@@ -2014,8 +2574,8 @@ source = "git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-up
 dependencies = [
  "impl-trait-for-tuples",
  "parity-scale-codec",
- "sp-std",
- "wasmi",
+ "sp-std 3.0.0 (git+https://github.com/bholdus/substrate.git?branch=monthly-2021-05-update)",
+ "wasmi 0.6.2",
 ]
 
 [[package]]
@@ -2185,7 +2745,19 @@ checksum = "09adeb8c97449311ccd28a427f96fb563e7fd31aabf994189879d9da2394b89d"
 dependencies = [
  "cfg-if 1.0.0",
  "pin-project-lite",
+ "tracing-attributes",
  "tracing-core",
+]
+
+[[package]]
+name = "tracing-attributes"
+version = "0.1.15"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c42e6fa53307c8a17e4ccd4dc81cf5ec38db9209f59b222210375b54ee40d1e2"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
 ]
 
 [[package]]
@@ -2340,8 +2912,23 @@ dependencies = [
  "memory_units",
  "num-rational 0.2.4",
  "num-traits",
- "parity-wasm",
- "wasmi-validation",
+ "parity-wasm 0.41.0",
+ "wasmi-validation 0.3.0",
+]
+
+[[package]]
+name = "wasmi"
+version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d2ee05bba3d1d994652079893941a2ef9324d2b58a63c31b40678fb7eddd7a5a"
+dependencies = [
+ "downcast-rs",
+ "libc",
+ "memory_units",
+ "num-rational 0.2.4",
+ "num-traits",
+ "parity-wasm 0.42.2",
+ "wasmi-validation 0.4.0",
 ]
 
 [[package]]
@@ -2350,7 +2937,16 @@ version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ea78c597064ba73596099281e2f4cfc019075122a65cdda3205af94f0b264d93"
 dependencies = [
- "parity-wasm",
+ "parity-wasm 0.41.0",
+]
+
+[[package]]
+name = "wasmi-validation"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a2eb8e860796d8be48efef530b60eebf84e74a88bce107374fffb0da97d504b8"
+dependencies = [
+ "parity-wasm 0.42.2",
 ]
 
 [[package]]
@@ -2400,4 +2996,33 @@ dependencies = [
  "quote",
  "syn",
  "synstructure",
+]
+
+[[package]]
+name = "zstd"
+version = "0.6.1+zstd.1.4.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5de55e77f798f205d8561b8fe2ef57abfb6e0ff2abe7fd3c089e119cdb5631a3"
+dependencies = [
+ "zstd-safe",
+]
+
+[[package]]
+name = "zstd-safe"
+version = "3.0.1+zstd.1.4.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1387cabcd938127b30ce78c4bf00b30387dddf704e3f0881dbc4ff62b5566f8c"
+dependencies = [
+ "libc",
+ "zstd-sys",
+]
+
+[[package]]
+name = "zstd-sys"
+version = "1.4.20+zstd.1.4.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ebd5b733d7cf2d9447e2c3e76a5589b4f5e5ae065c22a2bc0b023cbc331b6c8e"
+dependencies = [
+ "cc",
+ "libc",
 ]

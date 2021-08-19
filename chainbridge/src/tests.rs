@@ -103,7 +103,7 @@ fn whitelist_chain() {
             Error::<Test>::InvalidChainId
         );
 
-        assert_events(vec![Event::bridge(crate::Event::ChainWhitelisted(0))]);
+        assert_events(vec![Event::Bridge(crate::Event::ChainWhitelisted(0))]);
     })
 }
 
@@ -119,8 +119,8 @@ fn set_get_threshold() {
         assert_eq!(<RelayerThreshold<Test>>::get(), 5);
 
         assert_events(vec![
-            Event::bridge(crate::Event::RelayerThresholdChanged(TEST_THRESHOLD)),
-            Event::bridge(crate::Event::RelayerThresholdChanged(5)),
+            Event::Bridge(crate::Event::RelayerThresholdChanged(TEST_THRESHOLD)),
+            Event::Bridge(crate::Event::RelayerThresholdChanged(5)),
         ]);
     })
 }
@@ -145,8 +145,8 @@ fn asset_transfer_success() {
             amount.into()
         ));
         assert_events(vec![
-            Event::bridge(crate::Event::ChainWhitelisted(dest_id.clone())),
-            Event::bridge(crate::Event::FungibleTransfer(
+            Event::Bridge(crate::Event::ChainWhitelisted(dest_id.clone())),
+            Event::Bridge(crate::Event::FungibleTransfer(
                 dest_id.clone(),
                 1,
                 resource_id.clone(),
@@ -162,7 +162,7 @@ fn asset_transfer_success() {
             to.clone(),
             metadata.clone()
         ));
-        assert_events(vec![Event::bridge(crate::Event::NonFungibleTransfer(
+        assert_events(vec![Event::Bridge(crate::Event::NonFungibleTransfer(
             dest_id.clone(),
             2,
             resource_id.clone(),
@@ -176,7 +176,7 @@ fn asset_transfer_success() {
             resource_id.clone(),
             metadata.clone()
         ));
-        assert_events(vec![Event::bridge(crate::Event::GenericTransfer(
+        assert_events(vec![Event::Bridge(crate::Event::GenericTransfer(
             dest_id.clone(),
             3,
             resource_id,
@@ -193,7 +193,7 @@ fn asset_transfer_invalid_chain() {
         let resource_id = [4; 32];
 
         assert_ok!(Bridge::whitelist_chain(Origin::root(), chain_id.clone()));
-        assert_events(vec![Event::bridge(crate::Event::ChainWhitelisted(
+        assert_events(vec![Event::Bridge(crate::Event::ChainWhitelisted(
             chain_id.clone(),
         ))]);
 
@@ -241,10 +241,10 @@ fn add_remove_relayer() {
         assert_eq!(Bridge::relayer_count(), 2);
 
         assert_events(vec![
-            Event::bridge(crate::Event::RelayerAdded(RELAYER_A)),
-            Event::bridge(crate::Event::RelayerAdded(RELAYER_B)),
-            Event::bridge(crate::Event::RelayerAdded(RELAYER_C)),
-            Event::bridge(crate::Event::RelayerRemoved(RELAYER_B)),
+            Event::Bridge(crate::Event::RelayerAdded(RELAYER_A)),
+            Event::Bridge(crate::Event::RelayerAdded(RELAYER_B)),
+            Event::Bridge(crate::Event::RelayerAdded(RELAYER_C)),
+            Event::Bridge(crate::Event::RelayerRemoved(RELAYER_B)),
         ]);
     })
 }
@@ -314,11 +314,11 @@ fn create_sucessful_proposal() {
         assert_eq!(prop, expected);
 
         assert_events(vec![
-            Event::bridge(crate::Event::VoteFor(src_id, prop_id, RELAYER_A)),
-            Event::bridge(crate::Event::VoteAgainst(src_id, prop_id, RELAYER_B)),
-            Event::bridge(crate::Event::VoteFor(src_id, prop_id, RELAYER_C)),
-            Event::bridge(crate::Event::ProposalApproved(src_id, prop_id)),
-            Event::bridge(crate::Event::ProposalSucceeded(src_id, prop_id)),
+            Event::Bridge(crate::Event::VoteFor(src_id, prop_id, RELAYER_A)),
+            Event::Bridge(crate::Event::VoteAgainst(src_id, prop_id, RELAYER_B)),
+            Event::Bridge(crate::Event::VoteFor(src_id, prop_id, RELAYER_C)),
+            Event::Bridge(crate::Event::ProposalApproved(src_id, prop_id)),
+            Event::Bridge(crate::Event::ProposalSucceeded(src_id, prop_id)),
         ]);
     })
 }
@@ -390,10 +390,10 @@ fn create_unsucessful_proposal() {
         );
 
         assert_events(vec![
-            Event::bridge(crate::Event::VoteFor(src_id, prop_id, RELAYER_A)),
-            Event::bridge(crate::Event::VoteAgainst(src_id, prop_id, RELAYER_B)),
-            Event::bridge(crate::Event::VoteAgainst(src_id, prop_id, RELAYER_C)),
-            Event::bridge(crate::Event::ProposalRejected(src_id, prop_id)),
+            Event::Bridge(crate::Event::VoteFor(src_id, prop_id, RELAYER_A)),
+            Event::Bridge(crate::Event::VoteAgainst(src_id, prop_id, RELAYER_B)),
+            Event::Bridge(crate::Event::VoteAgainst(src_id, prop_id, RELAYER_C)),
+            Event::Bridge(crate::Event::ProposalRejected(src_id, prop_id)),
         ]);
     })
 }
@@ -451,10 +451,10 @@ fn execute_after_threshold_change() {
         );
 
         assert_events(vec![
-            Event::bridge(crate::Event::VoteFor(src_id, prop_id, RELAYER_A)),
-            Event::bridge(crate::Event::RelayerThresholdChanged(1)),
-            Event::bridge(crate::Event::ProposalApproved(src_id, prop_id)),
-            Event::bridge(crate::Event::ProposalSucceeded(src_id, prop_id)),
+            Event::Bridge(crate::Event::VoteFor(src_id, prop_id, RELAYER_A)),
+            Event::Bridge(crate::Event::RelayerThresholdChanged(1)),
+            Event::Bridge(crate::Event::ProposalApproved(src_id, prop_id)),
+            Event::Bridge(crate::Event::ProposalSucceeded(src_id, prop_id)),
         ]);
     })
 }
@@ -529,7 +529,7 @@ fn proposal_expires() {
         };
         assert_eq!(prop, expected);
 
-        assert_events(vec![Event::bridge(crate::Event::VoteFor(
+        assert_events(vec![Event::Bridge(crate::Event::VoteFor(
             src_id, prop_id, RELAYER_A,
         ))]);
     })
